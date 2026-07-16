@@ -21,13 +21,15 @@ Install to another directory:
 ```sh
 curl -fsSL https://raw.githubusercontent.com/SlateNull/code-init/main/install.sh | CODE_INIT_INSTALL_DIR=/usr/local/bin sh
 ```
+git tag -a v1.1.0 -m "code-init 1.1.0"
+git push origin v1.1.0
 
 Installing to a protected system directory may require elevated permissions. Prefer the default user-local installation unless the machine is intentionally managed system-wide.
 
 Install a specific version:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/SlateNull/code-init/main/install.sh | CODE_INIT_VERSION=1.0.0 sh
+curl -fsSL https://raw.githubusercontent.com/SlateNull/code-init/main/install.sh | CODE_INIT_VERSION=1.1.0 sh
 ```
 
 ### Windows
@@ -43,7 +45,7 @@ The installer downloads the correct executable to `%LOCALAPPDATA%\Programs\code-
 To install a specific version:
 
 ```powershell
-$env:CODE_INIT_VERSION = "1.0.0"; irm https://raw.githubusercontent.com/SlateNull/code-init/main/install.ps1 | iex
+$env:CODE_INIT_VERSION = "1.1.0"; irm https://raw.githubusercontent.com/SlateNull/code-init/main/install.ps1 | iex
 ```
 
 ### Manual download
@@ -117,8 +119,8 @@ Pushing a signed or annotated `v*` tag triggers `.github/workflows/release.yml`.
 Create the first release:
 
 ```sh
-git tag -a v1.0.0 -m "code-init 1.0.0"
-git push origin v1.0.0
+git tag -a v1.1.0 -m "code-init 1.1.0"
+git push origin v1.1.0
 ```
 
 The one-command installers work only after that release workflow has successfully published the matching assets.
